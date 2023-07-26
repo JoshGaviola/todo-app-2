@@ -1,0 +1,61 @@
+.todo-app {
+  margin: 0;
+  position: absolute;
+  top: 35px;
+  left: 428px;
+  font-size: 128px;
+  font-weight: 400;
+  font-family: var(--font-inter);
+  color: #000;
+  text-align: left;
+  opacity: 0.5;
+}
+.addbutton,
+.darkmodeswitch-1,
+.textfield {
+  border: 0;
+  background-color: #d9d9d9;
+  position: absolute;
+  top: 470px;
+  left: 344px;
+  width: 752px;
+  height: 84px;
+}
+.addbutton,
+.darkmodeswitch-1 {
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  left: 1001px;
+  width: 95px;
+  background-image: url(./public/addbutton@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.darkmodeswitch-1 {
+  top: 0;
+  left: 1427px;
+  width: 239px;
+  height: 114px;
+  transform: rotate(180deg);
+  transform-origin: 0 0;
+  background-image: url(./public/darkmodeswitch1@3x.png);
+}
+.desktop-1-child {
+  position: absolute;
+  top: 10px;
+  left: 1188px;
+  width: 121px;
+  height: 95px;
+}
+.desktop-1 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+  height: 1024px;
+  overflow: hidden;
+}
