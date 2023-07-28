@@ -1,61 +1,116 @@
-.todo-app {
+/* Apply CSS reset to avoid default browser styling */
+* {
   margin: 0;
-  position: absolute;
-  top: 35px;
-  left: 428px;
-  font-size: 128px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a background color for the entire page */
+body {
+  background-color: #f0f0f0;
+}
+
+/* Center the content vertically and horizontally */
+.desktop-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Style the Todo App title */
+.todo-app {
+  font-size: 48px;
   font-weight: 400;
-  font-family: var(--font-inter);
+  font-family: 'Inter', sans-serif;
   color: #000;
-  text-align: left;
   opacity: 0.5;
+  margin-bottom: 20px;
 }
-.addbutton,
-.darkmodeswitch-1,
+
 .textfield {
-  border: 0;
-  background-color: #d9d9d9;
-  position: absolute;
-  top: 470px;
-  left: 344px;
-  width: 752px;
-  height: 84px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  font-size: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  width: 400px;
 }
-.addbutton,
+
+.textfield input {
+  flex: 1; /* This makes the input field fill the remaining space */
+  width: 100%; /* Make the input field fill the container */
+}
+
+/* Style the add button */
+.addbutton {
+  cursor: pointer;
+  background-color: #d9d9d9;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  margin-left: 10px;
+  background-image: url('./public/addbutton@3x.png');
+  background-size: cover;
+}
+
+/* Style the dark mode switch button */
 .darkmodeswitch-1 {
   cursor: pointer;
-  padding: 0;
-  background-color: transparent;
-  left: 1001px;
-  width: 95px;
-  background-image: url(./public/addbutton@3x.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-}
-.darkmodeswitch-1 {
-  top: 0;
-  left: 1427px;
-  width: 239px;
-  height: 114px;
-  transform: rotate(180deg);
-  transform-origin: 0 0;
-  background-image: url(./public/darkmodeswitch1@3x.png);
-}
-.desktop-1-child {
   position: absolute;
   top: 10px;
-  left: 1188px;
-  width: 121px;
-  height: 95px;
+  right: 10px;
+  background-color: #d9d9d9;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-image: url('./public/darkmodeswitch1@3x.png');
+  background-size: cover;
 }
-.desktop-1 {
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  background-color: #fff;
-  position: relative;
-  width: 100%;
-  height: 1024px;
-  overflow: hidden;
+
+/* Style the image */
+.desktop-1-child {
+  width: 200px;
+  height: 150px;
+  margin-top: 20px;
+}
+
+/* Style the task container */
+.task {
+  background-color: #f0f0f0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin: 10px 300px; /* Use 'auto' to center the tasks horizontally */
+  width: 70%; /* Adjust the width as desired */
+}
+
+/* Style the task number */
+.task span:first-child {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+/* Style the task content */
+.task span:last-child {
+  flex: 1;
+}
+
+/* Add some space between tasks */
+.task + .task {
+  margin-top: 10px;
+}
+
+.task-container {
+  margin-top: -178px; /* Add some space between the textfield and the tasks */
+}
+
+/* Remove the default outline for the buttons when focused */
+button:focus {
+  outline: none;
 }

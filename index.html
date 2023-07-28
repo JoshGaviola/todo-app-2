@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./index.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
-    />
-  </head>
-  <body>
-    <button class="desktop-1">
-      <h1 class="todo-app">Todo App</h1>
-      <input class="textfield" type="text" />
-
-      <button class="addbutton" autofocus></button>
-      <button class="darkmodeswitch-1" autofocus></button>
-      <img class="desktop-1-child" alt="" src="./public/rectangle-3.svg" />
-    </button>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="./global.css" />
+  <link rel="stylesheet" href="./index.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+  />
+</head>
+<body>
+  <div class="desktop-1">
+    <h1 class="todo-app">Todo App</h1>
+    <div class="textfield"> <!-- Wrap the input and button inside a div -->
+      <input type="text" id="taskInput" /> <!-- Add an ID to the input field -->
+      <button class="addbutton" onclick="addTask()" autofocus></button> <!-- Add an onclick event to the button -->
+    </div>
+    <button class="darkmodeswitch-1" autofocus></button>
+  </div>
+  <div class="task-container"></div>
+    <!-- Your other content remains the same -->
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
