@@ -1,6 +1,8 @@
 function addTask() {
   const taskInput = document.getElementById('taskInput');
   const taskText = taskInput.value.trim();
+  const menuIcon = document.getElementById('menuIcon');
+  const menuOptions = document.getElementById('menuOptions');
 
   if (taskText !== '') {
     const tasksContainer = document.createElement('div');
@@ -15,8 +17,21 @@ function addTask() {
     tasksContainer.appendChild(taskContent);
 
     const taskContainer = document.querySelector('.task-container');
-    taskContainer.appendChild(tasksContainer); // Append the task container to the task-container div
+    taskContainer.appendChild(tasksContainer); 
 
     taskInput.value = '';
   }
+
+  
 }
+
+
+menuIcon.addEventListener('click', () => {
+  console.log("hello");
+  
+  if (menuOptions.style.display === 'none') {
+    menuOptions.style.display = 'block';
+  } else {
+    menuOptions.style.display = 'none';
+  }
+});
