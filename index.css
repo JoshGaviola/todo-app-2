@@ -1,15 +1,12 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
 body {
   background-color: #f0f0f0;
 }
-
 
 .desktop-1 {
   display: flex;
@@ -19,7 +16,6 @@ body {
   min-height: 100vh;
 }
 
-/* Style the Todo App title */
 .todo-app {
   font-size: 48px;
   font-weight: 400;
@@ -45,7 +41,6 @@ body {
   width: 100%;
 }
 
-/* Style the add button */
 .addbutton {
   cursor: pointer;
   background-color: #d9d9d9;
@@ -58,7 +53,6 @@ body {
   background-size: cover;
 }
 
-/* Style the dark mode switch button */
 .darkmodeswitch-1 {
   cursor: pointer;
   position: absolute;
@@ -73,41 +67,50 @@ body {
   background-size: cover;
 }
 
-/* Style the image */
-.desktop-1-child {
-  width: 200px;
-  height: 150px;
-  margin-top: 20px;
+.task-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the task container */
+  margin-top: -152px; /* Adjust the margin as needed */
 }
 
-/* Style the task container */
 .task {
   background-color: #f0f0f0;
-  padding: 10px;
   display: flex;
   align-items: center;
-  margin: 10px 300px; 
-  width: 70%; 
+  padding: 8px;
+  font-size: 20px;
+  border: 2px solid #ccc;
+  border-radius: 90px;
+  margin-bottom: 20px;
+  width: 400px;
 }
 
-/* Style the task number */
 .task span:first-child {
   font-weight: bold;
   margin-right: 20px;
 }
 
-/* Style the task content */
 .task span:last-child {
   flex: 1;
 }
 
-/* Add some space between tasks */
 .task + .task {
   margin-top: 10px;
 }
 
-.task-container {
-  margin-top: -178px; /* Add some space between the textfield and the tasks */
+.delete-button {
+  cursor: pointer;
+  margin-left: auto;
+  color: red;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.delete-button-image {
+  width: 20px;
+  height: 20px;
 }
 
 .menu-wrapper {
@@ -124,7 +127,6 @@ body {
   z-index: 2; 
 }
 
-
 .menu-options {
   display: none; 
   position: absolute; 
@@ -135,7 +137,6 @@ body {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-
 
 .menu-options ul {
   list-style: none;
@@ -151,7 +152,6 @@ body {
   color: #333;
 }
 
-/* Remove the default outline for the buttons when focused */
 button:focus {
   outline: none;
 }

@@ -16,13 +16,26 @@ function addTask() {
     taskContent.textContent = taskText;
     tasksContainer.appendChild(taskContent);
 
+    const deleteButton = document.createElement('button');
+    deleteButton.className = 'delete-button';
+    deleteButton.onclick = function() {
+      tasksContainer.remove(); // Remove the task container when the delete button is clicked
+    };
+
+    // Create an image element for the delete button
+    const deleteButtonImage = document.createElement('img');
+    deleteButtonImage.src = "./public/deleteicon.png";
+    deleteButtonImage.alt = "Delete";
+    deleteButtonImage.className = "delete-button-image";
+
+    deleteButton.appendChild(deleteButtonImage);
+    tasksContainer.appendChild(deleteButton);
+
     const taskContainer = document.querySelector('.task-container');
-    taskContainer.appendChild(tasksContainer); 
+    taskContainer.appendChild(tasksContainer);
 
     taskInput.value = '';
   }
-
-  
 }
 
 
